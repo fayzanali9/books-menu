@@ -1,6 +1,7 @@
 # books-menu
 
-A personal Books Management project with a file acting as a database.
+A personal Books Management project with a (.txt) file acting as a database.
+
 
 End User can perform the following actions  
 
