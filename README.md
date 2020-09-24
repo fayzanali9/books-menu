@@ -1,6 +1,6 @@
-# books-menu-
+# books-menu
 
-A personal Books Management project with an in memory database(python list).
+A personal Books Management project with a file acting as a database.
 
 End User can perform the following actions  
 
