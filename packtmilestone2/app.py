@@ -12,6 +12,7 @@ Enter
 """
 
 def menu():
+    db.create_file()
     user_input = input(USER_CHOICE)
     while user_input != 'q':
         if user_input == 'a':
@@ -55,7 +56,7 @@ def list_books():
     #     print(f"Title : {book['name']}\nAuthor: {book['author']}")
     books = db.get_all_books()
     for book in books:
-        read = 'Yes' if book['read'] else 'No'
+        read = 'Yes' if book['read'] == '1' else 'No'
         print(f"{book['name']} by {book['author']}, read : {read}")
 
 def prompt_read_book():
@@ -65,7 +66,7 @@ def prompt_read_book():
 
 
 def prompt_delete_book():
-    name = input('Enter name of book to delete : ')
+    name = input('Enter name of the book to delete : ')
     db.delete_book(name)
 
 
