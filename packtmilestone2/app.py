@@ -8,10 +8,10 @@ Enter
 'r' to mark a book as read
 'd' to delete a book
 'q' to quit
-
-"""
+Your choice : """
 
 def menu():
+    db.create_file()
     user_input = input(USER_CHOICE)
     while user_input != 'q':
         if user_input == 'a':
@@ -56,7 +56,7 @@ def list_books():
     books = db.get_all_books()
     for book in books:
         read = 'Yes' if book['read'] else 'No'
-        print(f"{book['name']} by {book['author']}, read : {read}")
+        print(f"\n {book['name']} by {book['author']}, read : {read}")
 
 def prompt_read_book():
     name = input('Enter name of book you just finished reading: ')
@@ -65,7 +65,7 @@ def prompt_read_book():
 
 
 def prompt_delete_book():
-    name = input('Enter name of book to delete : ')
+    name = input('Enter name of the book to delete : ')
     db.delete_book(name)
 
 
