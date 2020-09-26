@@ -1,7 +1,7 @@
 
 """
-Concerned with storing and retrieving books from a csv file .
-format of csv file :
+Concerned with storing and retrieving books from a .txt file .
+format in the form of a csv file :
 
 name,author,read\n
 name,author,read\n
